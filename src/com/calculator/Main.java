@@ -51,7 +51,8 @@ public class Main extends JFrame {
 	public void run() {
 		setTitle("Calculadora");
 		setSize(300, 335);
-		setLocation(600, 200);
+		setLocation(400, 200);
+		setResizable(false);
 		setIconImage(new ImageIcon("images/calculator.png").getImage());
 		getContentPane().setBackground(Color.BLACK);
 
@@ -92,7 +93,7 @@ public class Main extends JFrame {
 	public void loadNumbers() {
 		number[0] = new JButton("0");
 		number[0].setBounds(100, 225, 45, 25);
-		number[0].setFont(new Font("Tahoma", Font.BOLD, 12));
+		number[0].setFont(new Font("Tahoma", Font.PLAIN, 12));
 		number[0].setBackground(Color.BLACK);
 		number[0].setForeground(Color.WHITE);
 		number[0].setBorder(new RoundedBorder(new Color(64, 64, 64), 10));
@@ -103,7 +104,7 @@ public class Main extends JFrame {
 		for (int index = 1; index < 10; index++) {
 			number[index] = new JButton("" + index);
 			number[index].setBounds(x, y, 45, 25);
-			number[index].setFont(new Font("Tahoma", Font.BOLD, 12));
+			number[index].setFont(new Font("Tahoma", Font.PLAIN, 12));
 			number[index].setBackground(Color.BLACK);
 			number[index].setForeground(Color.WHITE);
 			number[index].setBorder(new RoundedBorder(new Color(64, 64, 64), 10));
@@ -127,7 +128,7 @@ public class Main extends JFrame {
 
 		for (int index = 0; index < 4; index++) {
 			operation[index].setBounds(200, 150 + 25 * index, 45, 25);
-			operation[index].setFont(new Font("Tahoma", Font.BOLD, 12));
+			operation[index].setFont(new Font("Tahoma", Font.PLAIN, 12));
 			operation[index].setBackground(Color.BLACK);
 			operation[index].setForeground(new Color(255, 111, 0));
 			operation[index].setBorder(new RoundedBorder(new Color(64, 64, 64), 10));
@@ -143,7 +144,7 @@ public class Main extends JFrame {
 
 		point = new JButton(".");
 		result = new JButton("=");
-		clear = new JButton("C");
+		clear = new JButton("CE");
 		exit = new JButton("Fechar");
 
 		screen.setBounds(50, 50, 200, 30);
@@ -152,8 +153,8 @@ public class Main extends JFrame {
 		clear.setBounds(50, 110, 100, 25);
 		exit.setBounds(150, 110, 100, 25);
 
-		point.setFont(new Font("Tahoma", Font.BOLD, 12));
-		result.setFont(new Font("Tahoma", Font.BOLD, 12));
+		point.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		result.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		clear.setFont(new Font("Tahoma", Font.BOLD, 12));
 		exit.setFont(new Font("Tahoma", Font.BOLD, 12));
 
